@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include<ctime>
 #include <Windows.h>
 #include <mmsystem.h>
 namespace AttestationFiodorovDmitri {
@@ -186,8 +185,8 @@ namespace AttestationFiodorovDmitri {
 			// 
 			this->CheckHour1->FormattingEnabled = true;
 			this->CheckHour1->Items->AddRange(gcnew cli::array< System::Object^  >(24) {
-				L"01", L"02", L"03", L"04", L"05", L"06", L"07",
-					L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24"
+				L"00", L"01", L"02", L"03", L"04", L"05", L"06",
+					L"07", L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23"
 			});
 			this->CheckHour1->Location = System::Drawing::Point(29, 219);
 			this->CheckHour1->Name = L"CheckHour1";
@@ -431,24 +430,64 @@ namespace AttestationFiodorovDmitri {
 		
 			if (CheckHour1->Text == HoursBox->Text && CheckMin1->Text == MinBox->Text && SecBox->Text=="00" && checkBox1->Checked == true)
 			{
-				PlaySound(TEXT("sound1.wav"), NULL, SND_SYNC);
+				PlaySound(TEXT("sound1.wav"), NULL, SND_ASYNC);
 				MessageBox::Show(this, "Wake up,it's not time to sleep");
 				
+				System::Windows::Forms::DialogResult result = MessageBox::Show("Остановить будильник? Если нет - то переставить на 1 мин",
+					"Сообщение",
+					MessageBoxButtons::YesNo);
+				//выбор функции после срабатывания будильника
+				if (result == System::Windows::Forms::DialogResult::Yes)
+				{
+					CheckMin1->Text = CheckMin1->Text + 1;
+				}
+				else if (result == System::Windows::Forms::DialogResult::No)
+				{
+					
+					
+				}
 			}
+
 
 		//проверка второго будильника 
 			if (CheckHour2->Text == HoursBox->Text && CheckMin2->Text == MinBox->Text && SecBox->Text == "00" && checkBox2->Checked == true)
 			{
-				PlaySound(TEXT("sound1.wav"), NULL, SND_SYNC);
+				PlaySound(TEXT("sound1.wav"), NULL, SND_ASYNC);
 				MessageBox::Show(this, "Wake up,it's not time to sleep");
 
+				System::Windows::Forms::DialogResult result = MessageBox::Show("Остановить будильник? Если нет - то переставить на 1 мин",
+					"Сообщение",
+					MessageBoxButtons::YesNo);
+				//выбор функции после срабатывания будильника
+				if (result == System::Windows::Forms::DialogResult::Yes)
+				{
+					CheckMin2->Text = CheckMin2->Text + 1;
+				}
+				else if (result == System::Windows::Forms::DialogResult::No)
+				{
+
+
+				}
 			}
 		//проверка третьего будильника
 			if (CheckHour3->Text == HoursBox->Text && CheckMin3->Text == MinBox->Text && SecBox->Text == "00" && checkBox3->Checked == true)
 			{
-				PlaySound(TEXT("sound1.wav"), NULL, SND_SYNC);
+				PlaySound(TEXT("sound1.wav"), NULL, SND_ASYNC);
 				MessageBox::Show(this, "Wake up,it's not time to sleep");
 
+				System::Windows::Forms::DialogResult result = MessageBox::Show("Остановить будильник? Если нет - то переставить на 1 мин",
+					"Сообщение",
+					MessageBoxButtons::YesNo);
+				//выбор функции после срабатывания будильника
+				if (result == System::Windows::Forms::DialogResult::Yes)
+				{
+					CheckMin3->Text = CheckMin3->Text + 1;
+				}
+				else if (result == System::Windows::Forms::DialogResult::No)
+				{
+
+
+				}
 			}
 
 
