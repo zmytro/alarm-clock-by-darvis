@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include<ctime>
-#include <windows.h>
+#include <Windows.h>
 #include <mmsystem.h>
 namespace AttestationFiodorovDmitri {
 
@@ -49,13 +49,22 @@ namespace AttestationFiodorovDmitri {
 	private: System::Windows::Forms::TextBox^ textBox3;
 
 	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::MaskedTextBox^ maskedTextBox1;
+
 	private: System::Windows::Forms::ComboBox^ CheckHour1;
 	private: System::Windows::Forms::ComboBox^ CheckMin1;
 	private: System::Windows::Forms::TextBox^ MinBox;
 	private: System::Windows::Forms::TextBox^ SecBox;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::ComboBox^ CheckMin2;
+	private: System::Windows::Forms::ComboBox^ CheckHour2;
+	private: System::Windows::Forms::CheckBox^ checkBox2;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::ComboBox^ CheckMin3;
+	private: System::Windows::Forms::ComboBox^ CheckHour3;
+	private: System::Windows::Forms::CheckBox^ checkBox3;
 
 
 
@@ -87,18 +96,26 @@ namespace AttestationFiodorovDmitri {
 			this->DateBox = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->maskedTextBox1 = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->CheckHour1 = (gcnew System::Windows::Forms::ComboBox());
 			this->CheckMin1 = (gcnew System::Windows::Forms::ComboBox());
 			this->MinBox = (gcnew System::Windows::Forms::TextBox());
 			this->SecBox = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->CheckMin2 = (gcnew System::Windows::Forms::ComboBox());
+			this->CheckHour2 = (gcnew System::Windows::Forms::ComboBox());
+			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->CheckMin3 = (gcnew System::Windows::Forms::ComboBox());
+			this->CheckHour3 = (gcnew System::Windows::Forms::ComboBox());
+			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(111, 149);
+			this->button1->Location = System::Drawing::Point(111, 135);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(157, 23);
 			this->button1->TabIndex = 1;
@@ -150,29 +167,20 @@ namespace AttestationFiodorovDmitri {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(-12, 304);
+			this->textBox3->Location = System::Drawing::Point(12, 178);
 			this->textBox3->Multiline = true;
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(357, 266);
+			this->textBox3->Size = System::Drawing::Size(357, 222);
 			this->textBox3->TabIndex = 5;
 			// 
 			// checkBox1
 			// 
 			this->checkBox1->AutoSize = true;
-			this->checkBox1->Location = System::Drawing::Point(75, 189);
+			this->checkBox1->Location = System::Drawing::Point(143, 222);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(15, 14);
 			this->checkBox1->TabIndex = 7;
 			this->checkBox1->UseVisualStyleBackColor = true;
-			// 
-			// maskedTextBox1
-			// 
-			this->maskedTextBox1->Location = System::Drawing::Point(29, 186);
-			this->maskedTextBox1->Mask = L"90:00";
-			this->maskedTextBox1->Name = L"maskedTextBox1";
-			this->maskedTextBox1->Size = System::Drawing::Size(33, 20);
-			this->maskedTextBox1->TabIndex = 8;
-			this->maskedTextBox1->ValidatingType = System::DateTime::typeid;
 			// 
 			// CheckHour1
 			// 
@@ -181,11 +189,10 @@ namespace AttestationFiodorovDmitri {
 				L"01", L"02", L"03", L"04", L"05", L"06", L"07",
 					L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24"
 			});
-			this->CheckHour1->Location = System::Drawing::Point(29, 223);
+			this->CheckHour1->Location = System::Drawing::Point(29, 219);
 			this->CheckHour1->Name = L"CheckHour1";
 			this->CheckHour1->Size = System::Drawing::Size(41, 21);
 			this->CheckHour1->TabIndex = 9;
-			this->CheckHour1->Text = L"13";
 			// 
 			// CheckMin1
 			// 
@@ -196,7 +203,7 @@ namespace AttestationFiodorovDmitri {
 					L"25", L"26", L"27", L"28", L"29", L"30", L"31", L"32", L"33", L"34", L"35", L"36", L"37", L"38", L"39", L"40", L"41", L"42",
 					L"43", L"44", L"45", L"46", L"47", L"48", L"49", L"50", L"51", L"52", L"53", L"54", L"55", L"56", L"57", L"58", L"59"
 			});
-			this->CheckMin1->Location = System::Drawing::Point(76, 223);
+			this->CheckMin1->Location = System::Drawing::Point(76, 219);
 			this->CheckMin1->Name = L"CheckMin1";
 			this->CheckMin1->Size = System::Drawing::Size(41, 21);
 			this->CheckMin1->TabIndex = 10;
@@ -255,19 +262,136 @@ namespace AttestationFiodorovDmitri {
 			this->label3->TabIndex = 14;
 			this->label3->Text = L":";
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->label4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Consolas", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->Location = System::Drawing::Point(144, 192);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(84, 15);
+			this->label4->TabIndex = 15;
+			this->label4->Text = L"Будильник 1";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->label5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Consolas", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(144, 254);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(84, 15);
+			this->label5->TabIndex = 19;
+			this->label5->Text = L"Будильник 2";
+			// 
+			// CheckMin2
+			// 
+			this->CheckMin2->FormattingEnabled = true;
+			this->CheckMin2->Items->AddRange(gcnew cli::array< System::Object^  >(60) {
+				L"00", L"01", L"02", L"03", L"04", L"05", L"06",
+					L"07", L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24",
+					L"25", L"26", L"27", L"28", L"29", L"30", L"31", L"32", L"33", L"34", L"35", L"36", L"37", L"38", L"39", L"40", L"41", L"42",
+					L"43", L"44", L"45", L"46", L"47", L"48", L"49", L"50", L"51", L"52", L"53", L"54", L"55", L"56", L"57", L"58", L"59"
+			});
+			this->CheckMin2->Location = System::Drawing::Point(76, 281);
+			this->CheckMin2->Name = L"CheckMin2";
+			this->CheckMin2->Size = System::Drawing::Size(41, 21);
+			this->CheckMin2->TabIndex = 18;
+			// 
+			// CheckHour2
+			// 
+			this->CheckHour2->FormattingEnabled = true;
+			this->CheckHour2->Items->AddRange(gcnew cli::array< System::Object^  >(24) {
+				L"01", L"02", L"03", L"04", L"05", L"06", L"07",
+					L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24"
+			});
+			this->CheckHour2->Location = System::Drawing::Point(29, 281);
+			this->CheckHour2->Name = L"CheckHour2";
+			this->CheckHour2->Size = System::Drawing::Size(41, 21);
+			this->CheckHour2->TabIndex = 17;
+			// 
+			// checkBox2
+			// 
+			this->checkBox2->AutoSize = true;
+			this->checkBox2->Location = System::Drawing::Point(143, 284);
+			this->checkBox2->Name = L"checkBox2";
+			this->checkBox2->Size = System::Drawing::Size(15, 14);
+			this->checkBox2->TabIndex = 16;
+			this->checkBox2->UseVisualStyleBackColor = true;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->label6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Consolas", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label6->Location = System::Drawing::Point(144, 317);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(84, 15);
+			this->label6->TabIndex = 23;
+			this->label6->Text = L"Будильник 3";
+			// 
+			// CheckMin3
+			// 
+			this->CheckMin3->FormattingEnabled = true;
+			this->CheckMin3->Items->AddRange(gcnew cli::array< System::Object^  >(60) {
+				L"00", L"01", L"02", L"03", L"04", L"05", L"06",
+					L"07", L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24",
+					L"25", L"26", L"27", L"28", L"29", L"30", L"31", L"32", L"33", L"34", L"35", L"36", L"37", L"38", L"39", L"40", L"41", L"42",
+					L"43", L"44", L"45", L"46", L"47", L"48", L"49", L"50", L"51", L"52", L"53", L"54", L"55", L"56", L"57", L"58", L"59"
+			});
+			this->CheckMin3->Location = System::Drawing::Point(76, 344);
+			this->CheckMin3->Name = L"CheckMin3";
+			this->CheckMin3->Size = System::Drawing::Size(41, 21);
+			this->CheckMin3->TabIndex = 22;
+			// 
+			// CheckHour3
+			// 
+			this->CheckHour3->FormattingEnabled = true;
+			this->CheckHour3->Items->AddRange(gcnew cli::array< System::Object^  >(24) {
+				L"01", L"02", L"03", L"04", L"05", L"06", L"07",
+					L"08", L"09", L"10", L"11", L"12", L"13", L"14", L"15", L"16", L"17", L"18", L"19", L"20", L"21", L"22", L"23", L"24"
+			});
+			this->CheckHour3->Location = System::Drawing::Point(29, 344);
+			this->CheckHour3->Name = L"CheckHour3";
+			this->CheckHour3->Size = System::Drawing::Size(41, 21);
+			this->CheckHour3->TabIndex = 21;
+			// 
+			// checkBox3
+			// 
+			this->checkBox3->AutoSize = true;
+			this->checkBox3->Location = System::Drawing::Point(143, 347);
+			this->checkBox3->Name = L"checkBox3";
+			this->checkBox3->Size = System::Drawing::Size(15, 14);
+			this->checkBox3->TabIndex = 20;
+			this->checkBox3->UseVisualStyleBackColor = true;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->ClientSize = System::Drawing::Size(381, 456);
+			this->ClientSize = System::Drawing::Size(381, 409);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->CheckMin3);
+			this->Controls->Add(this->CheckHour3);
+			this->Controls->Add(this->checkBox3);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->CheckMin2);
+			this->Controls->Add(this->CheckHour2);
+			this->Controls->Add(this->checkBox2);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->SecBox);
 			this->Controls->Add(this->MinBox);
 			this->Controls->Add(this->CheckMin1);
 			this->Controls->Add(this->CheckHour1);
-			this->Controls->Add(this->maskedTextBox1);
 			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->DateBox);
@@ -286,11 +410,11 @@ namespace AttestationFiodorovDmitri {
 
 
 		if (checkBox1->Checked == true)
-			MessageBox::Show(this, "Будильник установлен");
+			MessageBox::Show(this, "Alarm Installed");
 
 			
 		if (checkBox1->Checked == false)
-			MessageBox::Show(this, "Ни один будильник не установлен");
+			MessageBox::Show(this, "No one alarm is installed");
 
 
 	}
@@ -303,11 +427,27 @@ namespace AttestationFiodorovDmitri {
 		SecBox->Text = DateTime::Now.ToString("ss");
 		DateBox->Text = DateTime::Now.ToString("dd/MM/yyyy");
 
-		
+		//проверка первого будильника 
 		
 			if (CheckHour1->Text == HoursBox->Text && CheckMin1->Text == MinBox->Text && SecBox->Text=="00" && checkBox1->Checked == true)
 			{
-				MessageBox::Show(this, "Вставай,будильник звенит");
+				PlaySound(TEXT("sound1.wav"), NULL, SND_SYNC);
+				MessageBox::Show(this, "Wake up,it's not time to sleep");
+				
+			}
+
+		//проверка второго будильника 
+			if (CheckHour2->Text == HoursBox->Text && CheckMin2->Text == MinBox->Text && SecBox->Text == "00" && checkBox2->Checked == true)
+			{
+				PlaySound(TEXT("sound1.wav"), NULL, SND_SYNC);
+				MessageBox::Show(this, "Wake up,it's not time to sleep");
+
+			}
+		//проверка третьего будильника
+			if (CheckHour3->Text == HoursBox->Text && CheckMin3->Text == MinBox->Text && SecBox->Text == "00" && checkBox3->Checked == true)
+			{
+				PlaySound(TEXT("sound1.wav"), NULL, SND_SYNC);
+				MessageBox::Show(this, "Wake up,it's not time to sleep");
 
 			}
 
